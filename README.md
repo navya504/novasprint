@@ -54,7 +54,7 @@ Planning automatically writes real Jira issues. Use a test project if you do not
 
 ## Implementation guide
 
-See [docs/NovaSprint_Implementation_Guide_GoogleDocs.docx](docs/NovaSprint_Implementation_Guide_GoogleDocs.docx) for the product primer, the research paper's Modular Agentic Planner (MAP), NovaSprint's implementation mapping, agent responsibilities, and technical architecture. The Word file is title-sanitized for import into Google Docs.
+See [docs/NovaSprint_Implementation_Guide.pdf](docs/NovaSprint_Implementation_Guide.pdf) for the product primer, the research paper's Modular Agentic Planner (MAP), NovaSprint's implementation mapping, agent responsibilities, and technical architecture. The Word file is title-sanitized for import into Google Docs.
 
 ## Local checks and troubleshooting
 
