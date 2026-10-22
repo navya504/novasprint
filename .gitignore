@@ -1,0 +1,4 @@
+data/workspace.json
+.env
+*.log
+/node_modules/

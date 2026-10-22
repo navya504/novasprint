@@ -1,0 +1,253 @@
+{
+  "settings": {
+    "workspaceName": "Nova Labs",
+    "teamName": "Product team",
+    "projectKey": "",
+    "boardId": "",
+    "sprintCadenceDays": 14,
+    "publicationPolicy": "approval",
+    "assignmentPolicy": "recommend",
+    "teamMembers": [
+      "sam",
+      "jamie",
+      "riley",
+      "morgan",
+      "release-manager"
+    ]
+  },
+  "team": [
+    {
+      "id": "sam",
+      "name": "Sam Kim",
+      "accountId": "",
+      "initials": "SK",
+      "role": "Backend engineer",
+      "color": "#e7def4",
+      "skills": [
+        {
+          "name": "API design",
+          "level": "advanced",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-20"
+        },
+        {
+          "name": "Python",
+          "level": "advanced",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-20"
+        },
+        {
+          "name": "Data modeling",
+          "level": "intermediate",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-20"
+        }
+      ],
+      "inferredSkills": [
+        {
+          "name": "AWS",
+          "source": "jira-history",
+          "confidence": 0.63
+        }
+      ],
+      "availability": {
+        "capacityPercent": 100,
+        "note": ""
+      },
+      "preference": "recommend",
+      "profileStatus": "confirmed",
+      "lastConfirmed": "2026-10-20",
+      "jiraHistory": []
+    },
+    {
+      "id": "jamie",
+      "name": "Jamie Lee",
+      "accountId": "",
+      "initials": "JL",
+      "role": "Product designer",
+      "color": "#f7dfd2",
+      "skills": [
+        {
+          "name": "UX research",
+          "level": "advanced",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-20"
+        },
+        {
+          "name": "Figma",
+          "level": "advanced",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-20"
+        },
+        {
+          "name": "Prototyping",
+          "level": "intermediate",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-20"
+        }
+      ],
+      "inferredSkills": [
+        {
+          "name": "Accessibility",
+          "source": "jira-history",
+          "confidence": 0.54
+        }
+      ],
+      "availability": {
+        "capacityPercent": 100,
+        "note": ""
+      },
+      "preference": "recommend",
+      "profileStatus": "confirmed",
+      "lastConfirmed": "2026-10-20",
+      "jiraHistory": []
+    },
+    {
+      "id": "riley",
+      "name": "Riley Torres",
+      "accountId": "",
+      "initials": "RT",
+      "role": "QA engineer",
+      "color": "#f2e7c8",
+      "skills": [
+        {
+          "name": "Test automation",
+          "level": "advanced",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-20"
+        },
+        {
+          "name": "API testing",
+          "level": "intermediate",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-20"
+        },
+        {
+          "name": "Quality",
+          "level": "advanced",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-20"
+        }
+      ],
+      "inferredSkills": [
+        {
+          "name": "Playwright",
+          "source": "jira-history",
+          "confidence": 0.71
+        }
+      ],
+      "availability": {
+        "capacityPercent": 100,
+        "note": ""
+      },
+      "preference": "recommend",
+      "profileStatus": "confirmed",
+      "lastConfirmed": "2026-10-20",
+      "jiraHistory": []
+    },
+    {
+      "id": "morgan",
+      "name": "Morgan Chen",
+      "accountId": "",
+      "initials": "MC",
+      "role": "Frontend engineer",
+      "color": "#dcebd9",
+      "skills": [
+        {
+          "name": "React",
+          "level": "advanced",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-20"
+        },
+        {
+          "name": "Design systems",
+          "level": "intermediate",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-20"
+        },
+        {
+          "name": "TypeScript",
+          "level": "advanced",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-20"
+        }
+      ],
+      "inferredSkills": [
+        {
+          "name": "Analytics",
+          "source": "jira-history",
+          "confidence": 0.58
+        }
+      ],
+      "availability": {
+        "capacityPercent": 100,
+        "note": ""
+      },
+      "preference": "recommend",
+      "profileStatus": "confirmed",
+      "lastConfirmed": "2026-10-20",
+      "jiraHistory": []
+    },
+    {
+      "id": "release-manager",
+      "name": "Taylor Reed",
+      "accountId": "",
+      "initials": "TR",
+      "role": "Release manager",
+      "color": "#eaf2ff",
+      "skills": [
+        {
+          "name": "Release planning",
+          "level": "advanced",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-22"
+        },
+        {
+          "name": "Deployment coordination",
+          "level": "advanced",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-22"
+        },
+        {
+          "name": "Release notes",
+          "level": "advanced",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-22"
+        },
+        {
+          "name": "Rollback planning",
+          "level": "intermediate",
+          "source": "team-confirmed",
+          "confidence": 1,
+          "confirmedAt": "2026-10-22"
+        }
+      ],
+      "inferredSkills": [],
+      "availability": {
+        "capacityPercent": 100,
+        "note": "Plans release readiness for each sprint. Add a Jira account ID to assign Jira issues directly."
+      },
+      "preference": "recommend",
+      "profileStatus": "confirmed",
+      "lastConfirmed": "2026-10-22",
+      "jiraHistory": []
+    }
+  ],
+  "plans": [],
+  "audit": []
+}

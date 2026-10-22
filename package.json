@@ -1,0 +1,22 @@
+{
+  "name": "novasprint",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A local MAP-inspired multi-agent sprint planner",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check app.js && node --check lib/graph.js && node --check lib/model.js && node --check lib/jira.js"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.0.0",
+    "@langchain/langgraph": "^1.0.0",
+    "@langchain/ollama": "^1.0.0",
+    "@langchain/openai": "^1.6.3",
+    "dotenv": "^16.4.7",
+    "zod": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
