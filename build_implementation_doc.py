@@ -282,13 +282,8 @@ add_p(doc,'This guide describes the implementation represented by the NovaSprint
 
 # Agent primer and framework requested for product implementation review.
 doc.add_page_break(); add_heading(doc,'The agent primer',1)
-add_p(doc,'Before choosing an architecture, state what the agent does autonomously, what it hands to a person, and how the end-to-end workflow will be measured. The one-line definition below describes NovaSprint as it is implemented today; unknown targets are left explicit instead of guessed.')
 add_heading(doc,'NovaSprint in one line',2)
-add_p(doc,'NovaSprint helps product teams turn a one-line sprint goal into an estimated, assigned and trackable Jira plan in a local web app, replacing manual task breakdown, forecasting, assignment and Jira entry; it reads team and Jira context, uses two integration categories (a configured LLM provider and Jira Cloud), publishes planned Jira work automatically, and hands the result to the team to inspect and track; end-to-end completion time and success-rate targets have not yet been measured.')
-add_heading(doc,'One-line template',2)
-add_p(doc,'My agent helps [USER] do [MULTI-STEP TASK] in [SURFACE], replacing [MANUAL WORKFLOW AND COST]. It does [WORK] on its own using [N TOOLS], hands off to a human [WHEN], and I’ll know it works when [USER] can [COMPLETE THE TASK] in under [TIME] with [SUCCESS RATE].')
-add_heading(doc,'Worked example',2)
-add_p(doc,'My agent helps a startup founder research a new market in a web app, replacing the 6 hours of manual googling and tab-juggling it takes to size up competitors today. It searches the web, pulls each competitor’s pricing and positioning, and drafts a one-page brief on its own using 4 tools, hands off to the founder to review before the brief gets saved, and I’ll know it works when a founder can get a usable market brief in under 15 minutes that they would actually send to their team 8 times out of 10.')
+add_p(doc,'NovaSprint helps product teams turn a one-line sprint goal into an ordered, estimated, assigned and trackable Jira plan in a local web app, replacing manual task breakdown, forecasting, assignment and issue entry; it reads team and Jira context, uses a configured LLM provider and Jira Cloud, publishes the planned Jira work automatically, and hands the result to the team to inspect and track; it works when a valid sprint goal produces a complete plan, every planned Jira issue is created, and Track can report their current status, with planning time measured from submission to publication.')
 add_heading(doc,'Three rules for the one-liner',2)
 add_table(doc,['Rule','Meaning'],[
  ('Measure task completion, not one-call accuracy.','The agent succeeds when a user finishes the full workflow. Measure the end-to-end result.'),
@@ -298,7 +293,7 @@ add_table(doc,['Rule','Meaning'],[
 add_p(doc,'NovaSprint product-policy note. The current implementation automatically publishes the generated plan to Jira when planning finishes, as requested for this product. It therefore has no pre-publication human approval step and is an explicit exception to the default write-review rule above.')
 
 doc.add_page_break(); add_heading(doc,'NovaSprint agent framework',1)
-add_p(doc,'The framework below distinguishes the current implementation from measurement targets that still need to be set. It is grounded in the source code and does not claim unmeasured time savings or success rates.')
+add_p(doc,'The following framework maps NovaSprint’s user workflow, current capabilities and operating boundaries to each design field.')
 add_table(doc,['Field','NovaSprint definition'],[
  ('Agent goal','Convert a sprint goal and project context into an ordered, estimated, assigned plan; create the planned Jira issues; then let the team track Jira progress.'),
  ('Where people use it','A local browser app served by the Node.js service. Planning output, plan history, Jira publication and Track progress are available in the web interface.'),
@@ -308,9 +303,9 @@ add_table(doc,['Field','NovaSprint definition'],[
  ('What it must never do','Invent task results, baseline or post-change metrics, outcome percentages, Jira statuses or evidence. It should not silently substitute a fixed sample plan or hard-coded response when agents fail; failures should be explicit.'),
  ('Human involvement','Current product policy publishes Jira work automatically after planning, then gives the team the plan to inspect and Track. There is no pre-write approval gate in this build; the default write-safety rule recommends adding one if policy changes.'),
  ('When something breaks','Structured model output gets one compact-context retry with a larger response budget; empty decomposition gets one focused retry. A second failure is surfaced as an error. Jira publication reports partial outcomes when individual writes fail; the planning graph does not loop from evaluation back to task generation.'),
- ('How success is measured','Primary proposed measure: end-to-end plan-and-publish success rate—the share of valid goal runs that produce a complete task list and create every planned Jira issue that can then be checked by Track. Planning-time target and success-rate threshold are not yet instrumented or supplied.')
+ ('How success is measured','End-to-end completion rate: the share of valid goal runs that produce a complete task list, create every planned Jira issue, and let Track report their current status. Measure planning time from goal submission to completed publication.')
 ],widths=[1.72,5.03],font_size=8.25)
-add_p(doc,'Measurement status: the code provides task counts, Jira publication outcomes, elapsed agent durations and tracking results, but it does not yet calculate a product-level completion-time baseline or an accepted-plan success rate. Set those thresholds after collecting real runs.')
+add_p(doc,'Track supplies Jira completion and status evidence, and planning runs record agent durations. Evaluator compares product KPIs only when baseline and post-change evidence are available.')
 
 # MAP flow
 doc.add_page_break(); add_heading(doc,'1  MAP planning architecture',1)
