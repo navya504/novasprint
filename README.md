@@ -44,13 +44,17 @@ Open PowerShell in this folder.
 ## Run an end-to-end planning check
 
 1. Use a Jira test project/board while trying the publisher for the first time.
-2. Click **Plan a sprint**, enter a Sprint Goal, dates, and PO task list, then submit.
+2. Click **Plan a sprint**, enter a one-line Sprint Goal and dates, then submit. A task list is optional; the Task Decomposer derives tasks from the goal and project context.
 3. Watch the live LangGraph agent updates. The run uses the configured model provider and selected Jira board; a connection/model error stops the run.
-4. Review the generated scope, dependencies, estimates, assignments, and Monitor findings. Fill any missing acceptance criteria and save the review edits.
-5. Approve only after the plan is ready. NovaSprint creates Jira issues, assigns mapped team members, links dependencies, and adds issues to the selected sprint when one is configured.
-6. Confirm the created issues in Jira and in NovaSprint Plan history.
+4. Review the generated scope, dependencies, estimates, assignments, acceptance criteria, and agent findings.
+5. Jira Publisher creates the planned Jira issues automatically, sets them to **To Do**, assigns mapped team members, links dependencies, and adds issues to the selected sprint when one is configured.
+6. Check the publication result in NovaSprint Plan history. Select **Track** to run Monitor Agent against Jira and refresh the progress dashboard.
 
-This end-to-end approval step writes real Jira issues. Use a test project if you do not want to change a production backlog.
+Planning automatically writes real Jira issues. Use a test project if you do not want to change a production backlog.
+
+## Implementation guide
+
+See [docs/NovaSprint_Implementation_Guide_GoogleDocs.docx](docs/NovaSprint_Implementation_Guide_GoogleDocs.docx) for the product primer, the research paper's Modular Agentic Planner (MAP), NovaSprint's implementation mapping, agent responsibilities, and technical architecture. The Word file is title-sanitized for import into Google Docs.
 
 ## Local checks and troubleshooting
 

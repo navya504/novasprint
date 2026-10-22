@@ -2,3 +2,7 @@ data/workspace.json
 .env
 *.log
 /node_modules/
+/.doc-build/
+/.docx-review/
+docs/NovaSprint_Implementation_Guide.docx
+~$*.docx
